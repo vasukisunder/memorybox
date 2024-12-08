@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Futura Book Italic';
+  src: url('/fonts/futura-book-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #11121B;
+  --text-color: #BAC4B8;
+  --font-primary: 'Futura Book Italic', sans-serif;
+}
+
+html, 
+body, 
+#root {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: var(--font-primary);
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+
+.header {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  background: var(--button-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+.display-section {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.memory-text {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  font-weight: 500;
+  text-align: center;
+}
+
+.input-section {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.memory-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.memory-input-field {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.memory-input-field:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.memory-submit-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background: var(--button-gradient);
+  border: none;
+  color: var(--bg-dark);
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.memory-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+::placeholder {
+  color: var(--text-secondary);
+}

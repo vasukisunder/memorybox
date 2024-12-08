@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Futura Bold Italic';
+  src: url('/fonts/futura-bold-italic.ttf') format('truetype');
+}
+
+.memory-display {
+  width: 100%;
+  max-width: 800px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.memory-container {
+  text-align: center;
+  margin: 0 4rem;
+}
+
+.memory-word {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.memory-char {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-family: 'Futura Bold Italic', serif;
+  display: inline-block;
+  text-shadow: 
+    0 0 7px rgba(186, 196, 184, 0.5),
+    0 0 10px rgba(186, 196, 184, 0.4),
+    0 0 21px rgba(186, 196, 184, 0.2);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .memory-container {
+    margin: 0 1rem;
+  }
+
+  .memory-char {
+    font-size: 1.8rem;
+  }
+
+  .memory-word {
+    white-space: nowrap;
+    margin-right: 0.3em;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+  .memory-char {
+    font-size: 1.5rem;
+  }
+} 
